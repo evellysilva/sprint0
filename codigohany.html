@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>1° avaliação de Desenvolvimento Web 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="provaDW1.css" />
+</head>
+<body>
+  <div class="container" >
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+     
+    <div class="content">      
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <form method="post" action=""> 
+          <h1>Login</h1> 
+          <p> 
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" class="validate" v-model="nome" required="required" type="text" placeholder="nome"/>
+          </p>
+           
+          <p> 
+            <label for="sobrenome">sobrenome</label>
+            <input id="sobrenome" name="sobrenome" class="validate" v-model="sobrenome" required="required" type="text" placeholder="sobrenome"/>
+          </p>
+        
+          <p> 
+            <label for="email">e-mail</label>
+            <input id="email" name="email" class="validate" v-model="email" required="required" type="password" placeholder="fulunao@gmail.com" /> 
+
+          </p>
+          <button onclick="myFunction1()">Imprimir Nome</button>
+          <button onclick="myFunction2()">Imprimir Sobrenome</button>
+          <button onclick="myFunction3()">Imprimir E-mail</button>
+          <p id="demo"></p>
+          <script>
+              function myFunction1()
+              {
+                  var x;
+                  var nome=prompt("Digite seu nome:");
+                  if (nome!=null)
+                  {
+                      x="nome: " +nome ;
+                      document.getElementById("demo").innerHTML=x;
+                      }
+              }
+              function myFunction2()
+              {
+                  var x;
+                  var sobrenome=prompt("Digite seu sobrenome:");
+                  if (sobrenome!=null)
+                  {
+                      x="sobrenome: " +sobrenome ;
+                      document.getElementById("demo").innerHTML=x;
+                      }
+              }
+              function myFunction3()
+              {
+                  var x;
+                  var email=prompt("Digite seu Email:");
+                  if (email!=null)
+                  {
+                      x="email: " +email ;
+                      document.getElementById("demo").innerHTML=x;
+                      }
+              }
+           </script>
+
+           
+          <p> 
+            <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+            <label for="manterlogado">Manter-me logado</label>
+          </p>
+           
+          <p> 
+            <input type="submit" value="Logar" /> 
+          </p>
+           
+          <p class="link">
+            Ainda não tem conta?
+            <a href="#paracadastro">Cadastre-se</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>  
+</body>
+</html>
